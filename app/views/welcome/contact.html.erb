@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+	<!-- Header Start -->
+	<header>
+		<div class="container-fluid agile-banner_nav">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="/"><img src="assets/logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- inner page banner-->
+	<div class="inner-banner"></div>
+	<!-- //inner page banner-->
+
+	<!-- Contact page -->
+	<section class="contact py-5 my-lg-5">
+		<div class="container">
+			<h3 class="heading text-center text-capitalize mb-5">Contact Us</h3>
+			<p></p>
+			<div class="row contact_information">
+				<div class="col-md-6 contact_left p-lg-5 p-4">
+					<iframe width="100%" height="440" src="https://maps.google.com/maps?width=100%&amp;height=440&amp;hl=en&amp;coord=10.8480257, 78.69482390000007&amp;q=%23171%2C%20Ganapathy%20Nagar%2C%20Thiruvanaikoil%2C%20Trichy%20-%20620005%20Tamil%20Nadu%2C%20India+(Tablelabs%20Private%20Limited)&amp;ie=UTF8&amp;t=&amp;z=17&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Embed Google Map</a></iframe>
+				</div>
+				<div class="col-md-6 mt-md-0 mt-4">
+					<div class="contact_right p-lg-5 p-4">
+						<%= form_tag("/newcontact", method: "post") do %>
+							<div class="w3_agileits_contact_left">
+								<h3 class="mb-3">Contact form</h3>
+								<input type="text" name="name" placeholder="Your Name" required="">
+								<input type="email" name="email" placeholder="Your Email" required="">
+								<input type="text" name="phone" class="numeric" maxlength="10" placeholder="Phone Number" required="">
+								<textarea name="message" placeholder="Your Description Here..." required=""></textarea>
+							</div>
+							<div class="w3_agileits_contact_right">
+								<input type="submit" value="Submit">
+							</div>
+							<div class="clearfix"> </div>
+						<% end %>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="mt-5 information">
+						<div class="row">
+							<div class="col-sm-2 mb-sm-0 mb-3">
+								<i class="fas fa fa-comments"></i>
+							</div>
+							<div class="col-sm-10">
+								<h4 class="text-uppercase mb-4">General Communication</h4>
+								<p class="mb-3">for general queries, including partnership opportunities, please email us at <a href="mailto:tablelab4@yahoo.com">tablelab4@yahoo.com</a></p>
+							</div>
+						</div>
+				</div>
+					</div>
+					<div class="col-md-6 mt-md-5 mt-2 information">
+						<div class="row">
+							<div class="col-sm-2 mb-sm-0 mb-3">
+								<i class="fas fa fa-life-ring"></i>
+							</div>
+							<div class="col-sm-10">
+								<h4 class="text-uppercase mb-4">Technical Support</h4>
+								<p class="mb-3 text-capitalize">we are here to help! if you have technical issues, contact support <span>+91 74028 11006</span>.</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+	<!-- //Contact page -->
+
+	<!-- project -->
+	<section class="project py-5 text-center">
+		<div class="container">
+			<h3 class="text-capitalize mb-5">Do you want to start a new project ?</h3>
+			<a href="/contact" class="text-uppercase"><i class="fas fa fa-envelope-open"></i> contact us </a>
+		</div>
+	</section>
+	<!-- //project -->
+
+	<!-- footer -->	
+	<footer>
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3 class="text-uppercase mb-3">Address</h3>
+					<address>
+						<p><strong>Tablelabs OPC Private Limited</strong></p>
+						<p class="mb-3">#171, Ganapathy Nagar, Thiruvanaikoil, Trichy - 620005 Tamil Nadu, India.</p>
+						<p><strong>Phone</strong> : +91 74028 11006</p>
+						<p><strong>Email</strong> : <a href="mailto:tablelab4@yahoo.com">tablelab4@yahoo.com</a></p>
+					</address>
+				</div>
+				<div class="col-lg-2 col-md-6 mt-lg-0 mt-sm-0 mt-4 p-md-0">
+					<h3 class="text-uppercase mb-3">links</h3>
+					<div class="links">
+						<a class="pt-2 text-capitalize" href="/"><i class="fas fa fa-angle-right"></i> Home</a>
+						<a class="pt-2 text-capitalize" href="/about"><i class="fas fa fa-angle-right"></i> About</a>
+						<a class="pt-2 text-capitalize" href="/career"><i class="fas fa fa-angle-right"></i> Career</a>
+						<a class="pt-2 text-capitalize" href="/service"><i class="fas fa fa-angle-right"></i> Services</a>
+						<a class="pt-2 text-capitalize" href="/contact"><i class="fas fa fa-angle-right"></i> Contact Us</a>
+					</div>	
+				</div>
+				<div class="col-lg-3 col-md-6 mt-lg-0 mt-4">
+					<h3 class="text-uppercase mb-3">Recent posts</h3>
+					<div class="posts">
+						<p class="pt-2">Automated set-ups
+						<span class="font-italic">31st Dec, 2017.</span></p>
+						<p class="py-2 my-2 middle">Impressive processing speed
+						<span class="font-italic">31st Jan, 2018.</span></p>
+						<p class="pt-2">Highly scalable software
+						<span class="font-italic">31st Feb, 2018.</span></p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+					<h3 class="text-uppercase mb-3">Newsletter</h3>
+					<p class="mb-4 pt-2">Subscribe to Our Newsletter to get Important News, Amazing Offers & More</p>
+					<form action="#" method="post">
+						<input type="email" name="Email" placeholder="Enter your email..." required="">
+						<button class="btn1"><i class="far fa fa-envelope-o"></i></button>
+						<div class="clearfix"> </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+
+
+	<!-- copyright -->
+	<div class="copyright py-4">
+		<div class="container">
+			<div class="copyrightgrids row">
+				<div class="col-lg-6 col-12">
+					<p>© 2018 <span>Table Labs</span>. All Rights Reserved</p>
+				</div>
+				<div class="col-lg-6 col-12">
+					<ul class="social text-right mt-lg-0 mt-3">
+						<li><p class="mx-2 text-capitalize">follow us on : </p></li>
+						<li class="mx-2"><a href="#" class="socialfb"><span class="fab fa fa-facebook-f"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialtw"><span class="fab fa fa-twitter"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialgp"><span class="fab fa fa-google-plus"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialln"><span class="fab fa fa-linkedin"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialyh"><span class="fab fa fa-yahoo"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //copyright -->
+</body>
+<script type="text/javascript">
+  $(".numeric").keypress(function (e) {
+    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+      toastr.info('Numbers only allowed!','Information')
+      return false;
+    }
+  });
+</script>
+</html>

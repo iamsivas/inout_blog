@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+
+<body>
+	<!-- Header Start -->
+	<header>
+		<div class="container-fluid agile-banner_nav">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" href="/"><img src="assets/logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+						<li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+						<li class="nav-item active"><a class="nav-link" href="/contact">Contact Us</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- inner page banner-->
+	<div class="inner-banner"></div>
+	<!-- //inner page banner-->
+
+	<section class="contact py-5 my-lg-5">
+		<div class="container">
+			<h3 class="heading text-center text-capitalize mb-5">join with us</h3>
+			<div class="row contact_information">
+				<p>We are looking for those passionate about innovating, open source technologies, and disrupting pre-existing paradigms, in a place where collaboration, intellectual challenge, and fun are paramount.</p>
+
+				<div class="job-content">
+					<div class="tab">
+						<% for c in @careers %>
+							<button class="tablinks" onclick="openCity(event, '<%= c.id %>')" id="defaultOpen"><%= c.name %></button>
+						<% end %>
+					</div>
+
+					<% for co in @careers %>
+						<div id="<%= co.id %>" class="tabcontent">
+							<h3><%= co.name %></h3>
+							<h5>Job Description</h5>
+							<p><%= co.description%></p>
+							<h5>Skills</h5>
+							<p>
+								<ul>
+									<% co.skills.split('@').each do |s| %>
+										<% if !s.empty? %>
+											<li><%= s %></li>
+										<% end %>
+									<% end %>
+								</ul>
+							</p>
+							<a href="<%= to_apply_path(co.id)%>" class="applybtn" data-remote="true">Apply&emsp;<i class="fa fa-arrow-down"></i></a>							
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- project -->
+	<section class="project py-5 text-center">
+		<div class="container">
+			<h3 class="text-capitalize mb-5">Do you want to start a new project ?</h3>
+			<a href="/contact" class="text-uppercase"><i class="fas fa fa-envelope-open"></i> contact us </a>
+		</div>
+	</section>
+	<!-- //project -->
+
+	<!-- footer -->	
+	<footer>
+		<div class="container py-5">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<h3 class="text-uppercase mb-3">Address</h3>
+					<address>
+						<p><strong>Tablelabs OPC Private Limited</strong></p>
+						<p class="mb-3">#171, Ganapathy Nagar, Thiruvanaikoil, Trichy - 620005 Tamil Nadu, India.</p>
+						<p><strong>Phone</strong> : +91 74028 11006</p>
+						<p><strong>Email</strong> : <a href="mailto:tablelab4@yahoo.com">tablelab4@yahoo.com</a></p>
+					</address>
+				</div>
+				<div class="col-lg-2 col-md-6 mt-lg-0 mt-sm-0 mt-4 p-md-0">
+					<h3 class="text-uppercase mb-3">links</h3>
+					<div class="links">
+						<a class="pt-2 text-capitalize" href="/"><i class="fas fa fa-angle-right"></i> Home</a>
+						<a class="pt-2 text-capitalize" href="/about"><i class="fas fa fa-angle-right"></i> About</a>
+						<a class="pt-2 text-capitalize" href="/career"><i class="fas fa fa-angle-right"></i> Career</a>
+						<a class="pt-2 text-capitalize" href="/service"><i class="fas fa fa-angle-right"></i> Services</a>
+						<a class="pt-2 text-capitalize" href="/contact"><i class="fas fa fa-angle-right"></i> Contact Us</a>
+					</div>	
+				</div>
+				<div class="col-lg-3 col-md-6 mt-lg-0 mt-4">
+					<h3 class="text-uppercase mb-3">Recent posts</h3>
+					<div class="posts">
+						<p class="pt-2">Automated set-ups
+						<span class="font-italic">31st Dec, 2017.</span></p>
+						<p class="py-2 my-2 middle">Impressive processing speed
+						<span class="font-italic">31st Jan, 2018.</span></p>
+						<p class="pt-2">Highly scalable software
+						<span class="font-italic">31st Feb, 2018.</span></p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mt-lg-0 mt-4">
+					<h3 class="text-uppercase mb-3">Newsletter</h3>
+					<p class="mb-4 pt-2">Subscribe to Our Newsletter to get Important News, Amazing Offers & More</p>
+					<form action="#" method="post">
+						<input type="email" name="Email" placeholder="Enter your email..." required="">
+						<button class="btn1"><i class="far fa fa-envelope-o"></i></button>
+						<div class="clearfix"> </div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer -->
+
+
+	<!-- copyright -->
+	<div class="copyright py-4">
+		<div class="container">
+			<div class="copyrightgrids row">
+				<div class="col-lg-6 col-12">
+					<p>© 2018 <span>Table Labs</span>. All Rights Reserved</p>
+				</div>
+				<div class="col-lg-6 col-12">
+					<ul class="social text-right mt-lg-0 mt-3">
+						<li><p class="mx-2 text-capitalize">follow us on : </p></li>
+						<li class="mx-2"><a href="#" class="socialfb"><span class="fab fa fa-facebook-f"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialtw"><span class="fab fa fa-twitter"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialgp"><span class="fab fa fa-google-plus"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialln"><span class="fab fa fa-linkedin"></span></a></li>
+						<li class="mx-2"><a href="#" class="socialyh"><span class="fab fa fa-yahoo"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //copyright -->
+</body>
+<script>
+	function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	}
+	document.getElementById("defaultOpen").click();
+</script>
+<script>
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var span = document.getElementsByClassName("close")[0];
+	btn.onclick = function() {
+    modal.style.display = "block";
+	}
+	span.onclick = function() {
+    modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+	}
+</script>
+<script type="text/javascript">
+  function check_numeric(this){
+  	alert("k")
+  }
+</script>
+</html>
